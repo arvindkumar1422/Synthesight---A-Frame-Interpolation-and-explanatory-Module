@@ -1,0 +1,32 @@
+system:
+  name: "SYNTHESIGHT"
+  version: "2.0.0-research"
+  log_level: "INFO"
+
+interpolation:
+  model_path: "https://tfhub.dev/google/film/1"
+  batch_size: 1
+  precision: "float32" # Options: float32, float16 (if supported)
+
+detection:
+  enabled: true
+  thresholds:
+    motion_high: 5.0
+    motion_medium: 2.0
+    consistency_low: 0.85
+    edge_loss: 0.8
+    scene_change_diff: 0.3 # Histogram difference threshold for scene cut
+  weights:
+    motion: 0.4
+    consistency: 0.4
+    edge: 0.2
+
+explanation:
+  generate_heatmaps: true
+  heatmap_alpha: 0.6
+  save_debug_frames: true     # Master toggle for saving debug frames
+  debug_save_interval: 1      # Save every Nth frame (1 = all, 5 = every 5th)
+
+output:
+  video_codec: "avc1"         # Better compatibility than mp4v
+  report_format: "json"
