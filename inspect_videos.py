@@ -2,6 +2,15 @@ import cv2
 import os
 import argparse
 import webbrowser
+import sys
+
+# Ensure we can import from src
+sys.path.append(os.getcwd())
+try:
+    from src.explanation.report_generator import ReportGenerator
+except ImportError:
+    print("[WARNING] Could not import ReportGenerator. Dashboard graphs might be missing.")
+    ReportGenerator = None
 
 def inspect_videos(report_path=None):
     # Define files to inspect
@@ -88,6 +97,24 @@ def inspect_videos(report_path=None):
 
     # Create Master Dashboard if requested
     if report_path == "synthesight_dashboard.html":
+        # Generate Clean Reports (Graphs Only) to avoid duplication
+        clean_reports = {}
+        for base_name in ["report_pass2", "report_2x", "report_4x"]:
+            json_path = f"{base_name}.json"
+            clean_html_path = f"{base_name}_clean.html"
+            
+            if os.path.exists(json_path) and ReportGenerator:
+                try:
+                    print(f"[INFO] Generating clean report: {clean_html_path}")
+                    gen = ReportGenerator(json_path)
+                    gen.generate_html_report(clean_html_path)
+                    clean_reports[base_name] = clean_html_path
+                except Exception as e:
+                    print(f"[ERROR] Failed to generate clean report for {base_name}: {e}")
+                    clean_reports[base_name] = f"{base_name}.html" # Fallback
+            else:
+                clean_reports[base_name] = f"{base_name}.html" # Fallback
+
         dashboard_html = f"""
         <!DOCTYPE html>
         <html>
@@ -108,13 +135,13 @@ def inspect_videos(report_path=None):
                 {injected_content}
                 
                 <h2 class="section-title">1. Restoration Analysis (Choppy &rarr; Restored)</h2>
-                <iframe src="report_pass2.html"></iframe>
+                <iframe src="{clean_reports['report_pass2']}"></iframe>
                 
                 <h2 class="section-title">2. Super-Smooth 2x Analysis (Original &rarr; 48 FPS)</h2>
-                <iframe src="report_2x.html"></iframe>
+                <iframe src="{clean_reports['report_2x']}"></iframe>
                 
                 <h2 class="section-title">3. Super-Smooth 4x Analysis (Original &rarr; 96 FPS)</h2>
-                <iframe src="report_4x.html"></iframe>
+                <iframe src="{clean_reports['report_4x']}"></iframe>
             </div>
         </body>
         </html>
