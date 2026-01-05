@@ -86,6 +86,47 @@ def inspect_videos(report_path=None):
     # Combine content to inject
     injected_content = stats_html + video_gallery_html
 
+    # Create Master Dashboard if requested
+    if report_path == "synthesight_dashboard.html":
+        dashboard_html = f"""
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>SyntheSight Master Dashboard</title>
+            <style>
+                body {{ font-family: sans-serif; background: #111; color: #eee; margin: 0; padding: 20px; }}
+                h1 {{ text-align: center; color: #4facfe; }}
+                .container {{ max_width: 1200px; margin: 0 auto; }}
+                iframe {{ width: 100%; height: 800px; border: none; margin-bottom: 30px; background: #fff; border-radius: 10px; }}
+                .section-title {{ border-bottom: 2px solid #444; padding-bottom: 10px; margin-top: 40px; margin-bottom: 20px; color: #aaa; }}
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>SyntheSight Research Dashboard</h1>
+                
+                {injected_content}
+                
+                <h2 class="section-title">1. Restoration Analysis (Choppy &rarr; Restored)</h2>
+                <iframe src="report_pass2.html"></iframe>
+                
+                <h2 class="section-title">2. Super-Smooth 2x Analysis (Original &rarr; 48 FPS)</h2>
+                <iframe src="report_2x.html"></iframe>
+                
+                <h2 class="section-title">3. Super-Smooth 4x Analysis (Original &rarr; 96 FPS)</h2>
+                <iframe src="report_4x.html"></iframe>
+            </div>
+        </body>
+        </html>
+        """
+        with open(report_path, 'w') as f:
+            f.write(dashboard_html)
+        
+        print(f"\n[SUCCESS] Created Master Dashboard: {report_path}")
+        abs_path = os.path.abspath(report_path)
+        webbrowser.open(f"file://{abs_path}")
+        return
+
     # Inject into report if provided
     if report_path and os.path.exists(report_path):
         try:
