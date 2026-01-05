@@ -65,7 +65,7 @@ def inspect_videos(report_path=None):
                     Your browser does not support the video tag.
                 </video>
                 <div style="text-align: center; margin-top: 10px;">
-                    <a href="{f}" download style="display: inline-block; padding: 5px 15px; background: #4facfe; color: white; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: bold;">Download Video</a>
+                    <a href="{f}" download="{f}" style="display: inline-block; padding: 5px 15px; background: #4facfe; color: white; text-decoration: none; border-radius: 4px; font-size: 12px; font-weight: bold; cursor: pointer;">Download Video</a>
                 </div>
              </div>
         """
