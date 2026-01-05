@@ -53,30 +53,30 @@ SyntheSight operates on a modular pipeline designed for iterative research.
 ```mermaid
 graph TD
     subgraph "Phase 1: Controlled Degradation"
-        A[Original Video<br/>(24/30/60 FPS)] -->|Temporal Downsampling| B[Choppy Video<br/>(10/12/15 FPS)]
-        A -.->|Ground Truth Reference| G[Hidden Ground Truth]
+        A["Original Video<br/>(24/30/60 FPS)"] -->|Temporal Downsampling| B["Choppy Video<br/>(10/12/15 FPS)"]
+        A -.->|Ground Truth Reference| G["Hidden Ground Truth"]
     end
 
     subgraph "Phase 2: Intelligent Restoration"
-        B -->|Pass 1: 2x Upscale| C[Restored Video<br/>(20/24/30 FPS)]
-        C -->|Pass 2: 2x Upscale| D[Super-Smooth Video<br/>(40/48/60 FPS)]
+        B -->|Pass 1: 2x Upscale| C["Restored Video<br/>(20/24/30 FPS)"]
+        C -->|Pass 2: 2x Upscale| D["Super-Smooth Video<br/>(40/48/60 FPS)"]
     end
 
     subgraph "Phase 3: Explainable Analysis (XAI)"
-        C --> E{Analysis Engine}
+        C --> E{"Analysis Engine"}
         D --> E
         G --> E
         
-        E -->|Optical Flow| F[Motion Vectors]
-        E -->|Residuals| H[Error Heatmaps]
-        E -->|Metrics| I[Temporal Consistency]
+        E -->|Optical Flow| F["Motion Vectors"]
+        E -->|Residuals| H["Error Heatmaps"]
+        E -->|Metrics| I["Temporal Consistency"]
     end
 
     subgraph "Phase 4: Reporting"
-        F & H & I --> J[Interactive HTML Report]
-        J --> K[Video Gallery]
-        J --> L[XAI Image Grid]
-        J --> M[Quality Graphs]
+        F & H & I --> J["Interactive HTML Report"]
+        J --> K["Video Gallery"]
+        J --> L["XAI Image Grid"]
+        J --> M["Quality Graphs"]
     end
 ```
 
