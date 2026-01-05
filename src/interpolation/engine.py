@@ -54,8 +54,7 @@ class FILMInterpolator(BaseInterpolator):
         inputs = {
             'x0': input_frame1,
             'x1': input_frame2,
-            'time': tf.constant([time], dtype=tf.float32),
-            'period': tf.constant([1.0], dtype=tf.float32)
+            'time': tf.expand_dims(tf.constant([time], dtype=tf.float32), axis=-1)
         }
         
         result = self.model(inputs, training=False)
@@ -98,8 +97,29 @@ class SmartInterpolator(BaseInterpolator):
         
         # If similarity is low, it's a scene change
         # We invert logic: return True if change detected
-        is_cut = similarity < (1.0 - self.scene_change_threshold)
+        # scene_change_diff is typically 0.3, so threshold is 0.7
+        # If similarity < 0.7, it is a cut.
+        threshold = 1.0 - self.scene_change_threshold
+        is_cut = similarity < threshold
         return is_cut, similarity
+
+    def interpolate(self, frame1, frame2, time=0.5):
+        """
+        Smart interpolation that checks for scene cuts.
+        """
+        is_cut, score = self._detect_scene_change(frame1, frame2)
+        
+        if is_cut:
+            self.logger.warning(f"Scene cut detected (similarity: {score:.2f}). Skipping interpolation to avoid morphing.")
+            # Return frame1 or frame2 (duplicate) instead of morphing
+            # For t=0.5, we can just return frame1 or frame2. Let's return frame1 for first half, frame2 for second.
+            if time < 0.5:
+                return frame1
+            else:
+                return frame2
+        
+        # If no cut, proceed with heavy interpolation
+        return self.engine.interpolate(frame1, frame2, time)
 
     def interpolate(self, frame1, frame2, time=0.5):
         """

@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 authors:
 - family-names: "Chandramouleeswaran"
   given-names: "Arvind Kumar"
-title: "SyntheSight: An Explainable Framework for Reference-Free Artifact Detection in Deep Video Frame Interpolation"
+title: "Towards Explainable Frame Interpolation: Integrating Deep Video Synthesis with Interpretable Reasoning for Robust Visual Enhancement"
 version: 1.0.0
 date-released: 2023-12-22
 url: "https://github.com/arvindkumar1422/Synthesight---A-Frame-Interpolation-and-explanatory-Module"
