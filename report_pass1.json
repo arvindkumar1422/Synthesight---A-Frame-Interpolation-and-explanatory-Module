@@ -1,0 +1,926 @@
+{
+  "metadata": {
+    "input_file": "my_choppy_video.mp4",
+    "output_file": "my_restored_pass1.mp4",
+    "processing_date": "2026-01-05T21:50:10.389526",
+    "model_used": "FILM",
+    "frame_rate_original": 10.0,
+    "frame_rate_output": 20.0,
+    "total_frames_processed": 60
+  },
+  "summary": {
+    "average_severity": 0.10508474576271187,
+    "verdict_distribution": {
+      "PASS": 54,
+      "WARNING": 4,
+      "FAIL": 1
+    },
+    "processing_time_seconds": 2.884711980819702
+  },
+  "frames": [
+    {
+      "frame_number": 0,
+      "timestamp": 0.0,
+      "metrics": {
+        "motion_complexity": 2.7428257453721017e-05,
+        "temporal_consistency": 0.8028857633371094,
+        "edge_preservation": 0.0,
+        "occlusion_risk": 19.293551793981482
+      },
+      "severity_score": 0.3,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "Reduced edge density (0.00). The frame may suffer from blurring or ghosting."
+      ]
+    },
+    {
+      "frame_number": 1,
+      "timestamp": 0.1,
+      "metrics": {
+        "motion_complexity": 0.30884885787963867,
+        "temporal_consistency": 0.9499177199617553,
+        "edge_preservation": 1.9999999999770335,
+        "occlusion_risk": 23.30185763888889
+      },
+      "severity_score": 0.5,
+      "verdict": "WARNING",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "Increased edge density (2.00). Potential high-frequency noise or artifacts introduced.",
+        "High occlusion risk detected (diff: 23.30)."
+      ]
+    },
+    {
+      "frame_number": 2,
+      "timestamp": 0.2,
+      "metrics": {
+        "motion_complexity": 0.09183730185031891,
+        "temporal_consistency": 0.9730741374219308,
+        "edge_preservation": 1.2881709223501285,
+        "occlusion_risk": 22.523608217592592
+      },
+      "severity_score": 0.5,
+      "verdict": "WARNING",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "Increased edge density (1.29). Potential high-frequency noise or artifacts introduced.",
+        "High occlusion risk detected (diff: 22.52)."
+      ]
+    },
+    {
+      "frame_number": 3,
+      "timestamp": 0.3,
+      "metrics": {
+        "motion_complexity": 0.10317350924015045,
+        "temporal_consistency": 0.9794473271083048,
+        "edge_preservation": 1.0554069545249225,
+        "occlusion_risk": 23.599500868055557
+      },
+      "severity_score": 0.3,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "High occlusion risk detected (diff: 23.60)."
+      ]
+    },
+    {
+      "frame_number": 4,
+      "timestamp": 0.4,
+      "metrics": {
+        "motion_complexity": 0.10954064875841141,
+        "temporal_consistency": 0.9825522315019666,
+        "edge_preservation": 1.0602245661761431,
+        "occlusion_risk": 23.95498263888889
+      },
+      "severity_score": 0.3,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "High occlusion risk detected (diff: 23.95)."
+      ]
+    },
+    {
+      "frame_number": 5,
+      "timestamp": 0.5,
+      "metrics": {
+        "motion_complexity": 0.11856509745121002,
+        "temporal_consistency": 0.9866028111031475,
+        "edge_preservation": 0.9609869956627085,
+        "occlusion_risk": 11.77740306712963
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 6,
+      "timestamp": 0.6,
+      "metrics": {
+        "motion_complexity": 0.45853888988494873,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.212518929831017,
+        "occlusion_risk": 3.4531336805555557
+      },
+      "severity_score": 0.2,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "Increased edge density (1.21). Potential high-frequency noise or artifacts introduced."
+      ]
+    },
+    {
+      "frame_number": 7,
+      "timestamp": 0.7,
+      "metrics": {
+        "motion_complexity": 0.22148817777633667,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.1360772784525597,
+        "occlusion_risk": 2.467228009259259
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 8,
+      "timestamp": 0.8,
+      "metrics": {
+        "motion_complexity": 0.14240805804729462,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.0290225214747921,
+        "occlusion_risk": 2.0586125578703705
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 9,
+      "timestamp": 0.9,
+      "metrics": {
+        "motion_complexity": 0.20504289865493774,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.105307497892024,
+        "occlusion_risk": 2.177105034722222
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 10,
+      "timestamp": 1.0,
+      "metrics": {
+        "motion_complexity": 0.27174514532089233,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.0568759219786446,
+        "occlusion_risk": 2.7227199074074075
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 11,
+      "timestamp": 1.1,
+      "metrics": {
+        "motion_complexity": 0.7949138283729553,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.0415692651683943,
+        "occlusion_risk": 5.33447193287037
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 12,
+      "timestamp": 1.2,
+      "metrics": {
+        "motion_complexity": 0.5350936055183411,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.962957706499606,
+        "occlusion_risk": 4.456983506944445
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 13,
+      "timestamp": 1.3,
+      "metrics": {
+        "motion_complexity": 0.5399095416069031,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.993999759989932,
+        "occlusion_risk": 4.768315972222222
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 14,
+      "timestamp": 1.4,
+      "metrics": {
+        "motion_complexity": 0.5692446827888489,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9833150269361519,
+        "occlusion_risk": 5.215577256944444
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 15,
+      "timestamp": 1.5,
+      "metrics": {
+        "motion_complexity": 0.5715937614440918,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9808429118770309,
+        "occlusion_risk": 5.405934606481481
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 16,
+      "timestamp": 1.6,
+      "metrics": {
+        "motion_complexity": 0.5756033658981323,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9706444328640086,
+        "occlusion_risk": 5.659801793981481
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 17,
+      "timestamp": 1.7,
+      "metrics": {
+        "motion_complexity": 0.48443448543548584,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9476363636360634,
+        "occlusion_risk": 5.658903356481481
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 18,
+      "timestamp": 1.8,
+      "metrics": {
+        "motion_complexity": 0.6137293577194214,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9178777661509437,
+        "occlusion_risk": 5.947216435185185
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 19,
+      "timestamp": 1.9,
+      "metrics": {
+        "motion_complexity": 0.4514923393726349,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.8938264128086979,
+        "occlusion_risk": 5.134971064814815
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 20,
+      "timestamp": 2.0,
+      "metrics": {
+        "motion_complexity": 5.604735851287842,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.1292266250791199,
+        "occlusion_risk": 15.235423900462964
+      },
+      "severity_score": 0.4,
+      "verdict": "PASS",
+      "explanation": [
+        "High motion detected (magnitude: 5.60). This increases the risk of occlusion artifacts."
+      ]
+    },
+    {
+      "frame_number": 21,
+      "timestamp": 2.1,
+      "metrics": {
+        "motion_complexity": 4.845334053039551,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.6404435058064881,
+        "occlusion_risk": 38.213038194444444
+      },
+      "severity_score": 0.7,
+      "verdict": "WARNING",
+      "explanation": [
+        "Moderate motion detected (magnitude: 4.85).",
+        "Reduced edge density (0.64). The frame may suffer from blurring or ghosting.",
+        "High occlusion risk detected (diff: 38.21)."
+      ]
+    },
+    {
+      "frame_number": 22,
+      "timestamp": 2.2,
+      "metrics": {
+        "motion_complexity": 3.3807103633880615,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.3669637777346177,
+        "occlusion_risk": 38.06434606481481
+      },
+      "severity_score": 0.6000000000000001,
+      "verdict": "WARNING",
+      "explanation": [
+        "Moderate motion detected (magnitude: 3.38).",
+        "Increased edge density (1.37). Potential high-frequency noise or artifacts introduced.",
+        "High occlusion risk detected (diff: 38.06)."
+      ]
+    },
+    {
+      "frame_number": 23,
+      "timestamp": 2.3,
+      "metrics": {
+        "motion_complexity": 1.312016487121582,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.096884067111858,
+        "occlusion_risk": 9.302293113425925
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 24,
+      "timestamp": 2.4,
+      "metrics": {
+        "motion_complexity": 1.5797613859176636,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.0926057169850834,
+        "occlusion_risk": 8.315541087962963
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 25,
+      "timestamp": 2.5,
+      "metrics": {
+        "motion_complexity": 2.2834722995758057,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.1035016674601803,
+        "occlusion_risk": 8.505167824074075
+      },
+      "severity_score": 0.1,
+      "verdict": "PASS",
+      "explanation": [
+        "Moderate motion detected (magnitude: 2.28)."
+      ]
+    },
+    {
+      "frame_number": 26,
+      "timestamp": 2.6,
+      "metrics": {
+        "motion_complexity": 1.9362980127334595,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.1083494208488966,
+        "occlusion_risk": 8.321317997685185
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 27,
+      "timestamp": 2.7,
+      "metrics": {
+        "motion_complexity": 2.239722967147827,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.11067382230121,
+        "occlusion_risk": 7.2614568865740745
+      },
+      "severity_score": 0.1,
+      "verdict": "PASS",
+      "explanation": [
+        "Moderate motion detected (magnitude: 2.24)."
+      ]
+    },
+    {
+      "frame_number": 28,
+      "timestamp": 2.8,
+      "metrics": {
+        "motion_complexity": 1.2704195976257324,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.1207971563423584,
+        "occlusion_risk": 7.153511284722223
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 29,
+      "timestamp": 2.9,
+      "metrics": {
+        "motion_complexity": 1.0122605562210083,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.0985680985676205,
+        "occlusion_risk": 6.954845196759259
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 30,
+      "timestamp": 3.0,
+      "metrics": {
+        "motion_complexity": 0.865139365196228,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.0487947019863193,
+        "occlusion_risk": 6.724438657407408
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 31,
+      "timestamp": 3.1,
+      "metrics": {
+        "motion_complexity": 0.6863071918487549,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.0346333536457388,
+        "occlusion_risk": 6.075759548611111
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 32,
+      "timestamp": 3.2,
+      "metrics": {
+        "motion_complexity": 0.5441725850105286,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9698102357673182,
+        "occlusion_risk": 5.278671875
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 33,
+      "timestamp": 3.3,
+      "metrics": {
+        "motion_complexity": 0.41763871908187866,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9755105729257343,
+        "occlusion_risk": 4.820185185185185
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 34,
+      "timestamp": 3.4,
+      "metrics": {
+        "motion_complexity": 0.40511709451675415,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9880563670730474,
+        "occlusion_risk": 4.830510706018519
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 35,
+      "timestamp": 3.5,
+      "metrics": {
+        "motion_complexity": 0.4217473566532135,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9613997705291125,
+        "occlusion_risk": 4.875004340277778
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 36,
+      "timestamp": 3.6,
+      "metrics": {
+        "motion_complexity": 0.3746982514858246,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9580051454578463,
+        "occlusion_risk": 4.665536747685185
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 37,
+      "timestamp": 3.7,
+      "metrics": {
+        "motion_complexity": 0.405090868473053,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9623275762139196,
+        "occlusion_risk": 4.887947048611111
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 38,
+      "timestamp": 3.8,
+      "metrics": {
+        "motion_complexity": 0.4153693616390228,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9272450532721739,
+        "occlusion_risk": 5.211384548611111
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 39,
+      "timestamp": 3.9,
+      "metrics": {
+        "motion_complexity": 0.3635271191596985,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9183340293858081,
+        "occlusion_risk": 4.424380787037037
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 40,
+      "timestamp": 4.0,
+      "metrics": {
+        "motion_complexity": 0.437786728143692,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.8924898485823309,
+        "occlusion_risk": 5.219894386574074
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 41,
+      "timestamp": 4.1,
+      "metrics": {
+        "motion_complexity": 6.766499996185303,
+        "temporal_consistency": 0.8270348118958801,
+        "edge_preservation": 0.0,
+        "occlusion_risk": 23.593075810185184
+      },
+      "severity_score": 1.0,
+      "verdict": "FAIL",
+      "explanation": [
+        "High motion detected (magnitude: 6.77). This increases the risk of occlusion artifacts.",
+        "Reduced edge density (0.00). The frame may suffer from blurring or ghosting.",
+        "High occlusion risk detected (diff: 23.59)."
+      ]
+    },
+    {
+      "frame_number": 42,
+      "timestamp": 4.2,
+      "metrics": {
+        "motion_complexity": 0.0004790411039721221,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.0,
+        "occlusion_risk": 0.041652199074074074
+      },
+      "severity_score": 0.3,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "Reduced edge density (0.00). The frame may suffer from blurring or ghosting."
+      ]
+    },
+    {
+      "frame_number": 43,
+      "timestamp": 4.3,
+      "metrics": {
+        "motion_complexity": 0.00018933715182356536,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.0,
+        "occlusion_risk": 0.01560763888888889
+      },
+      "severity_score": 0.3,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "Reduced edge density (0.00). The frame may suffer from blurring or ghosting."
+      ]
+    },
+    {
+      "frame_number": 44,
+      "timestamp": 4.4,
+      "metrics": {
+        "motion_complexity": 0.24154256284236908,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.2821497120824796,
+        "occlusion_risk": 0.8718836805555555
+      },
+      "severity_score": 0.2,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "Increased edge density (1.28). Potential high-frequency noise or artifacts introduced."
+      ]
+    },
+    {
+      "frame_number": 45,
+      "timestamp": 4.5,
+      "metrics": {
+        "motion_complexity": 0.9687472581863403,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.4458900059103075,
+        "occlusion_risk": 3.1784071180555555
+      },
+      "severity_score": 0.2,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "Increased edge density (1.45). Potential high-frequency noise or artifacts introduced."
+      ]
+    },
+    {
+      "frame_number": 46,
+      "timestamp": 4.6,
+      "metrics": {
+        "motion_complexity": 1.18671715259552,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.4151186315962665,
+        "occlusion_risk": 4.557397280092593
+      },
+      "severity_score": 0.2,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable.",
+        "Increased edge density (1.42). Potential high-frequency noise or artifacts introduced."
+      ]
+    },
+    {
+      "frame_number": 47,
+      "timestamp": 4.7,
+      "metrics": {
+        "motion_complexity": 0.46809494495391846,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 1.1287515005989117,
+        "occlusion_risk": 3.3038845486111112
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 48,
+      "timestamp": 4.8,
+      "metrics": {
+        "motion_complexity": 0.1536661684513092,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9206523228714237,
+        "occlusion_risk": 1.8815436921296296
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 49,
+      "timestamp": 4.9,
+      "metrics": {
+        "motion_complexity": 0.0021085713524371386,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9998659697081032,
+        "occlusion_risk": 0.0348828125
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 50,
+      "timestamp": 5.0,
+      "metrics": {
+        "motion_complexity": 0.0005270850379019976,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.999195278968906,
+        "occlusion_risk": 0.013328993055555556
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 51,
+      "timestamp": 5.1,
+      "metrics": {
+        "motion_complexity": 9.898849384626374e-05,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9999999999989472,
+        "occlusion_risk": 0.000970775462962963
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 52,
+      "timestamp": 5.2,
+      "metrics": {
+        "motion_complexity": 0.00018583799828775227,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.9998657537914026,
+        "occlusion_risk": 0.008627025462962963
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 53,
+      "timestamp": 5.3,
+      "metrics": {
+        "motion_complexity": 6.008151103742421e-05,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.999999999998947,
+        "occlusion_risk": 0.0036024305555555558
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 54,
+      "timestamp": 5.4,
+      "metrics": {
+        "motion_complexity": 5.1955289563920815e-06,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.999999999998947,
+        "occlusion_risk": 0.0003486689814814815
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 55,
+      "timestamp": 5.5,
+      "metrics": {
+        "motion_complexity": 5.014686848880956e-06,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.999999999998947,
+        "occlusion_risk": 0.0003486689814814815
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 56,
+      "timestamp": 5.6,
+      "metrics": {
+        "motion_complexity": 4.932074079988524e-05,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.999999999998947,
+        "occlusion_risk": 0.003738425925925926
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 57,
+      "timestamp": 5.7,
+      "metrics": {
+        "motion_complexity": 3.242706225137226e-05,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.999999999998947,
+        "occlusion_risk": 0.0021180555555555558
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    },
+    {
+      "frame_number": 58,
+      "timestamp": 5.8,
+      "metrics": {
+        "motion_complexity": 4.8963131121126935e-05,
+        "temporal_consistency": 1.0,
+        "edge_preservation": 0.999999999998947,
+        "occlusion_risk": 0.0029759837962962964
+      },
+      "severity_score": 0.0,
+      "verdict": "PASS",
+      "explanation": [
+        "Low motion scene. Interpolation should be reliable."
+      ]
+    }
+  ]
+}

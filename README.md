@@ -54,7 +54,7 @@ SyntheSight operates on a modular pipeline designed for iterative research.
 graph TD
     subgraph "Phase 1: Controlled Degradation"
         A[Original Video<br/>(24/30/60 FPS)] -->|Temporal Downsampling| B[Choppy Video<br/>(10/12/15 FPS)]
-        A -.->|Ground Truth Reference| G
+        A -.->|Ground Truth Reference| G[Hidden Ground Truth]
     end
 
     subgraph "Phase 2: Intelligent Restoration"
@@ -131,6 +131,10 @@ classDiagram
         +PSNR
         +L1_Loss
         +Motion_Complexity
+    }
+    class ReportGenerator {
+        +generate_html_report()
+        +inject_video_gallery()
     }
     XAIEngine --> Metrics : Uses
     XAIEngine --> ReportGenerator : Feeds Data
